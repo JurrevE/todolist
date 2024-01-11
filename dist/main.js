@@ -1,1 +1,1 @@
-console.log("krijg kanker");
+(()=>{"use strict";let t=new class{constructor(t,e,i,o,s){this.title=t,this.description=e,this.dueDate=i,this.priority=o,this.notes=s}}("Homework","right now","before I die","high","heel moeilijk");console.log(t)})();
