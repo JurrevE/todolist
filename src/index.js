@@ -1,3 +1,4 @@
+import "./styles.css"
 import { todo } from "./createTodo";
 import { createProject } from "./createProject";
 import { setPriorityToHigh, setPriorityToMedium, setPriorityToLow } from "./prioritySwitcher";

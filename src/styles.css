@@ -1,0 +1,16 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    background: rgb(35,187,73);
+background: linear-gradient(133deg, rgba(35,187,73,1) 28%, rgba(0,212,255,1) 100%);
+}
+
+.maincontent {
+height: 90vh;
+width: 95vw;
+background-color: #e9e5de;
+margin: 40px;
+
+}
