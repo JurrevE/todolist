@@ -10,6 +10,16 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/completionSwitcher.js":
+/*!***********************************!*\
+  !*** ./src/completionSwitcher.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   toggleCompletionStatus: () => (/* binding */ toggleCompletionStatus)\n/* harmony export */ });\nfunction toggleCompletionStatus(todo) {\n    todo.completionStatus = !todo.completionStatus\n}\n\n//# sourceURL=webpack://todolist/./src/completionSwitcher.js?");
+
+/***/ }),
+
 /***/ "./src/createProject.js":
 /*!******************************!*\
   !*** ./src/createProject.js ***!
@@ -26,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   defaultTodo: () => (/* binding */ defaultTodo),\n/* harmony export */   todo: () => (/* binding */ todo)\n/* harmony export */ });\nclass todo {\n    constructor(title, description, dueDate, priority, notes) {\n        this.title = title;\n        this.description = description;\n        this.dueDate = dueDate;\n        this.priority = priority;\n        this.notes = notes;\n    }\n}\nconst defaultTodo = new todo(\"Default Todo\", \"Default description\", \"Default due date\", \"low\", \"Default notes\");\n\n\n\n//# sourceURL=webpack://todolist/./src/createTodo.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   defaultTodo: () => (/* binding */ defaultTodo),\n/* harmony export */   todo: () => (/* binding */ todo)\n/* harmony export */ });\nclass todo {\n    constructor(title, description, dueDate, priority, notes) {\n        this.title = title;\n        this.description = description;\n        this.dueDate = dueDate;\n        this.priority = priority;\n        this.notes = notes;\n        this.completionStatus = false\n    }\n}\nconst defaultTodo = new todo(\"Default Todo\", \"Default description\", \"Default due date\", \"low\", \"Default notes\");\n\n\n\n//# sourceURL=webpack://todolist/./src/createTodo.js?");
 
 /***/ }),
 
@@ -36,7 +46,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _createTodo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createTodo */ \"./src/createTodo.js\");\n/* harmony import */ var _createProject__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./createProject */ \"./src/createProject.js\");\n/* harmony import */ var _prioritySwitcher__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./prioritySwitcher */ \"./src/prioritySwitcher.js\");\n\n\n\n\n\nlet { project, defaultProject } = (0,_createProject__WEBPACK_IMPORTED_MODULE_1__.createProject)();\n\n\nlet todo1 = new _createTodo__WEBPACK_IMPORTED_MODULE_0__.todo(\"Homework\", \"right now\", \"before I die\", \"high\", \"heel moeilijk\");\nlet todo2 = new _createTodo__WEBPACK_IMPORTED_MODULE_0__.todo(\"Monkey\", \"rn\", \"before I die\", \"low\", \"niet zo moeilijk\");\n\ndefaultProject.addTodo(todo1);\ndefaultProject.addTodo(todo2);\nconsole.log(defaultProject);\n\n(0,_prioritySwitcher__WEBPACK_IMPORTED_MODULE_2__.setPriorityToLow)(todo1)\nconsole.log(todo1)\n\n\n\n//# sourceURL=webpack://todolist/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _createTodo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createTodo */ \"./src/createTodo.js\");\n/* harmony import */ var _createProject__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./createProject */ \"./src/createProject.js\");\n/* harmony import */ var _prioritySwitcher__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./prioritySwitcher */ \"./src/prioritySwitcher.js\");\n/* harmony import */ var _completionSwitcher__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./completionSwitcher */ \"./src/completionSwitcher.js\");\n\n\n\n\n\n\nlet { project, defaultProject } = (0,_createProject__WEBPACK_IMPORTED_MODULE_1__.createProject)();\n\n\nlet todo1 = new _createTodo__WEBPACK_IMPORTED_MODULE_0__.todo(\"Homework\", \"right now\", \"before I die\", \"high\", \"heel moeilijk\");\nlet todo2 = new _createTodo__WEBPACK_IMPORTED_MODULE_0__.todo(\"Monkey\", \"rn\", \"before I die\", \"low\", \"niet zo moeilijk\");\nlet todo3 = new _createTodo__WEBPACK_IMPORTED_MODULE_0__.todo(\"Get money\", \"always\", \"2024\", \"high\", \"best lastig\", false)\n\ndefaultProject.addTodo(todo1);\ndefaultProject.addTodo(todo2);\nconsole.log(defaultProject);\n\n(0,_prioritySwitcher__WEBPACK_IMPORTED_MODULE_2__.setPriorityToLow)(todo1)\nconsole.log(todo1)\n\nconsole.log(todo3)\n;(0,_prioritySwitcher__WEBPACK_IMPORTED_MODULE_2__.setPriorityToMedium)(todo3)\n;(0,_completionSwitcher__WEBPACK_IMPORTED_MODULE_3__.toggleCompletionStatus)(todo3)\n\n\n\n\n\n\n\n//# sourceURL=webpack://todolist/./src/index.js?");
 
 /***/ }),
 
