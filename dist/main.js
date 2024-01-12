@@ -36,7 +36,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _createTodo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createTodo */ \"./src/createTodo.js\");\n/* harmony import */ var _createProject__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./createProject */ \"./src/createProject.js\");\n\n\n\n\nlet { project, defaultProject } = (0,_createProject__WEBPACK_IMPORTED_MODULE_1__.createProject)();\n\n\nlet todo1 = new _createTodo__WEBPACK_IMPORTED_MODULE_0__.todo(\"Homework\", \"right now\", \"before I die\", \"high\", \"heel moeilijk\");\nlet todo2 = new _createTodo__WEBPACK_IMPORTED_MODULE_0__.todo(\"Monkey\", \"rn\", \"before I die\", \"low\", \"niet zo moeilijk\");\n\ndefaultProject.addTodo(todo1);\ndefaultProject.addTodo(todo2);\nconsole.log(defaultProject);\n\n\n\n//# sourceURL=webpack://todolist/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _createTodo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createTodo */ \"./src/createTodo.js\");\n/* harmony import */ var _createProject__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./createProject */ \"./src/createProject.js\");\n/* harmony import */ var _prioritySwitcher__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./prioritySwitcher */ \"./src/prioritySwitcher.js\");\n\n\n\n\n\nlet { project, defaultProject } = (0,_createProject__WEBPACK_IMPORTED_MODULE_1__.createProject)();\n\n\nlet todo1 = new _createTodo__WEBPACK_IMPORTED_MODULE_0__.todo(\"Homework\", \"right now\", \"before I die\", \"high\", \"heel moeilijk\");\nlet todo2 = new _createTodo__WEBPACK_IMPORTED_MODULE_0__.todo(\"Monkey\", \"rn\", \"before I die\", \"low\", \"niet zo moeilijk\");\n\ndefaultProject.addTodo(todo1);\ndefaultProject.addTodo(todo2);\nconsole.log(defaultProject);\n\n(0,_prioritySwitcher__WEBPACK_IMPORTED_MODULE_2__.setPriorityToLow)(todo1)\nconsole.log(todo1)\n\n\n\n//# sourceURL=webpack://todolist/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/prioritySwitcher.js":
+/*!*********************************!*\
+  !*** ./src/prioritySwitcher.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   setPriorityToHigh: () => (/* binding */ setPriorityToHigh),\n/* harmony export */   setPriorityToLow: () => (/* binding */ setPriorityToLow),\n/* harmony export */   setPriorityToMedium: () => (/* binding */ setPriorityToMedium)\n/* harmony export */ });\n\nfunction setPriorityToLow(todo) {\n    todo.priority = 'low';\n}\n\nfunction setPriorityToMedium(todo) {\n    todo.priority = 'medium';\n}\n\nfunction setPriorityToHigh(todo) {\n    todo.priority = 'high';\n}\n\n\n//# sourceURL=webpack://todolist/./src/prioritySwitcher.js?");
 
 /***/ })
 
