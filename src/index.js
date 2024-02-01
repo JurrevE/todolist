@@ -3,9 +3,16 @@ import { todo } from "./createTodo";
 import { createProject } from "./createProject";
 import { setPriorityToHigh, setPriorityToMedium, setPriorityToLow } from "./prioritySwitcher";
 import { toggleCompletionStatus } from "./completionSwitcher";
+import { displayProject } from "./displayProject";
 
 
 let { project, defaultProject } = createProject();
+let differentprojects = []
+differentprojects.push(defaultProject)
+console.log(differentprojects)
+
+let project2 = new project("Gym")
+console.log(project2)
 
 
 let todo1 = new todo("Homework", "right now", "before I die", "high", "heel moeilijk");
@@ -22,6 +29,8 @@ console.log(todo1)
 console.log(todo3)
 setPriorityToMedium(todo3)
 toggleCompletionStatus(todo3)
+displayProject()
+
 
 
 

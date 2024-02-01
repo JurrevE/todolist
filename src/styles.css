@@ -7,7 +7,7 @@ body {
 background: linear-gradient(133deg, rgba(35,187,73,1) 28%, rgba(0,212,255,1) 100%);
 }
 
-.maincontent {
+#maincontent {
 height: 90vh;
 width: 95vw;
 background-color: #e9e5de;
@@ -17,17 +17,28 @@ grid-template-columns: 2fr 4fr;
 
 }
 
-.projects {
+#projects {
     grid-column: 1 / 2;
     background-color: pink;
     margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
 
 
 }
 
-.todos {
+#todos {
     grid-column: 2 / 3;
     background-color: grey;
     margin: 1rem;
 
+}
+
+.projectbuttons { 
+    width: 6rem;
+    height: 3rem;
+    margin: 1rem;
 }
