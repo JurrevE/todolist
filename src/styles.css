@@ -49,3 +49,18 @@ grid-template-columns: 2fr 4fr;
     margin: 1rem;
     grid-row: 1 / 2;
 }
+
+#projectdialog {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 20rem;
+    width: 20rem;
+}
+
+#projectDialogCloseButton {
+    height: 2rem;
+    width: 2rem;
+    background-color: blueviolet;
+}
