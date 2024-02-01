@@ -21,10 +21,9 @@ grid-template-columns: 2fr 4fr;
     grid-column: 1 / 2;
     background-color: pink;
     margin: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    display: grid;
+    grid-template-rows: 7fr 1fr;
+    justify-content: center;
 
 
 
@@ -36,9 +35,17 @@ grid-template-columns: 2fr 4fr;
     margin: 1rem;
 
 }
-
+#addProjectBtn {
+    width: 6rem;
+    height: 3rem;
+    margin: 1rem;
+    background-color: blue;
+    color: white;
+    font-size: large;
+}
 .projectbuttons { 
     width: 6rem;
     height: 3rem;
     margin: 1rem;
+    grid-row: 1 / 2;
 }

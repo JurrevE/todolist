@@ -7,8 +7,9 @@ export function createProject() {
         addTodo(todo) {
             this.todos.push(todo);
         }
+        
     }
-    const defaultProject = new project("To-Do")
-    return {project, defaultProject}
+    
+    return {project}
 }
 
