@@ -66,3 +66,8 @@ dialog #projectdialog {
     justify-content: space-around;
     align-items: center;
 }
+
+::backdrop {
+    background-color: darkgrey;
+    opacity: 70%;
+}
