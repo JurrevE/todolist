@@ -8,6 +8,7 @@ export function addBtnFunc() {
   projects.append(addProjectBtn);
   let projectDialog = document.getElementById("projectdialog")
   let projectDialogCloseBtn = document.getElementById("projectDialogCloseButton")
+    let submitButton = document.getElementById("submitbutton");
   
   addProjectBtn.addEventListener("click", function() {
     projectDialog.showModal()
