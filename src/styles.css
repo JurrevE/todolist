@@ -24,9 +24,6 @@ grid-template-columns: 2fr 4fr;
     display: grid;
     grid-template-rows: 7fr 1fr;
     justify-content: center;
-
-
-
 }
 
 #todos {
@@ -50,17 +47,22 @@ grid-template-columns: 2fr 4fr;
     grid-row: 1 / 2;
 }
 
-#projectdialog {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: 20rem;
-    width: 20rem;
-}
-
 #projectDialogCloseButton {
     height: 2rem;
     width: 2rem;
     background-color: blueviolet;
+}
+
+dialog #projectdialog {
+    display: grid;
+    grid-template-rows: 1fr 6fr;
+    height: 0rem;
+    width: 30rem;
+}
+
+#projectform {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }

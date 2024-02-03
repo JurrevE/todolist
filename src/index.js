@@ -5,6 +5,7 @@ import { setPriorityToHigh, setPriorityToMedium, setPriorityToLow } from "./prio
 import { toggleCompletionStatus } from "./completionSwitcher";
 import { displayProject } from "./displayProject";
 import { addBtnFunc } from "./addBtnFunc";
+import { SubmitBtnFunc } from "./submitBtnFunc";
 
 
 
@@ -30,6 +31,7 @@ toggleCompletionStatus(todo3)
 
 
 addBtnFunc()
+
 
 
 

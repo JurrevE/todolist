@@ -1,0 +1,18 @@
+export function SubmitBtnFunc() {
+    let submitButton = document.getElementById("submitbutton");
+
+    // Check if the button exists
+    if (submitButton) {
+        submitButton.addEventListener("click", function(event) {
+            event.preventDefault();
+
+            let titlenameinputvalue = document.getElementById("projectTitle").value;
+            console.log(titlenameinputvalue);
+
+            // Assuming dialogProject is defined somewhere in your code
+            projectdialog.close()
+        });
+    } else {
+        console.error("Submit button not found");
+    }
+}
