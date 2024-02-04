@@ -1,24 +1,32 @@
 import { displayProject } from "./displayProject";
+import { createProject } from "./createProject";
 
 export function SubmitBtnFunc() {
     let submitButton = document.getElementById("submitbutton");
-    let projectTitle = document.getElementById("projectTitle")
+    let projectTitle = document.getElementById("projectTitle");
+    let createProjectResult = createProject();
+    let newProject;
 
-
-        
-        submitButton.addEventListener("click", handleClick);
-
-  
+    submitButton.addEventListener("click", handleClick);
 
     function handleClick(event) {
         event.preventDefault();
 
-        let titlenameinputvalue = document.getElementById("projectTitle").value;
-        console.log(titlenameinputvalue);
+        let titleNameInputValue = projectTitle.value;
+        console.log(titleNameInputValue);
 
-        // Assuming dialogProject is defined somewhere in your code
+        // Assuming projectdialog is defined somewhere in your code
         projectdialog.close();
-        projectTitle.value = ""
-        displayProject(titlenameinputvalue)
+        projectTitle.value = "";
+
+        // Instantiate a new project using the project constructor from createProject
+        newProject = new createProjectResult.project(titleNameInputValue);
+        console.log(newProject);
+
+        // Display the new project
+        displayProject(titleNameInputValue);
+
+        // Remove the event listener if it's no longer needed
+        submitButton.removeEventListener("click", handleClick);
     }
 }
