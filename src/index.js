@@ -8,6 +8,8 @@ import { addBtnFunc } from "./addBtnFunc";
 import { SubmitBtnFunc } from "./submitBtnFunc";
 
 
+addBtnFunc()
+SubmitBtnFunc()
 
 let { project } = createProject();
 let differentprojects = []
@@ -30,7 +32,7 @@ setPriorityToMedium(todo3)
 toggleCompletionStatus(todo3)
 
 
-addBtnFunc()
+
 
 
 

@@ -1,5 +1,8 @@
+import { displayProject } from "./displayProject";
+
 export function SubmitBtnFunc() {
     let submitButton = document.getElementById("submitbutton");
+    let projectTitle = document.getElementById("projectTitle")
 
 
         
@@ -15,5 +18,7 @@ export function SubmitBtnFunc() {
 
         // Assuming dialogProject is defined somewhere in your code
         projectdialog.close();
+        projectTitle.value = ""
+        displayProject(titlenameinputvalue)
     }
 }
