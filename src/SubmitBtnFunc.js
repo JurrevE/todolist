@@ -1,5 +1,6 @@
 import { displayProject } from "./displayProject";
 import { createProject } from "./createProject";
+import { addProjectBtnFunc } from "./projectBtnFunc";
 
 export function SubmitBtnFunc() {
     let submitButton = document.getElementById("submitbutton");
@@ -23,7 +24,7 @@ export function SubmitBtnFunc() {
 
         displayProject(titleNameInputValue);
 
-    
+        addProjectBtnFunc()
 
     }
 }

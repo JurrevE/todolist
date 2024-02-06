@@ -6,6 +6,7 @@ import { toggleCompletionStatus } from "./completionSwitcher";
 import { displayProject } from "./displayProject";
 import { addBtnFunc } from "./addBtnFunc";
 import { SubmitBtnFunc } from "./SubmitBtnFunc.js";
+import { addProjectBtnFunc } from "./projectBtnFunc.js";
 
 
 addBtnFunc()
@@ -14,10 +15,6 @@ SubmitBtnFunc()
 let { project } = createProject();
 let differentprojects = []
 console.log(differentprojects, "kanker")
-
-let project2 = new project("Gym")
-console.log(project2)
-displayProject(project2.title)
 
 let todo1 = new todo("Homework", "right now", "before I die", "high", "heel moeilijk");
 let todo2 = new todo("Monkey", "rn", "before I die", "low", "niet zo moeilijk");
@@ -30,7 +27,6 @@ console.log(todo1)
 console.log(todo3)
 setPriorityToMedium(todo3)
 toggleCompletionStatus(todo3)
-
 
 
 

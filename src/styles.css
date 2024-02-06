@@ -42,6 +42,7 @@ grid-template-columns: 2fr 4fr;
     font-size: large;
 }
 .projectbuttons { 
+    flex-wrap: wrap;
     width: 6rem;
     height: 3rem;
     margin: 1rem;
@@ -72,3 +73,8 @@ dialog #projectdialog {
     opacity: 70%;
 }
 
+#showprojectdiv {
+    background-color: yellow;
+    width: 10rem;
+    height: 10rem;
+}
