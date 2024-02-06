@@ -1,4 +1,3 @@
-import { SubmitBtnFunc } from "./submitBtnFunc";
 
 export function addBtnFunc() {
   let projects = document.getElementById("projects");

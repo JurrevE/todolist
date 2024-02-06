@@ -15,18 +15,15 @@ export function SubmitBtnFunc() {
         let titleNameInputValue = projectTitle.value;
         console.log(titleNameInputValue);
 
-        // Assuming projectdialog is defined somewhere in your code
         projectdialog.close();
         projectTitle.value = "";
 
-        // Instantiate a new project using the project constructor from createProject
         newProject = new createProjectResult.project(titleNameInputValue);
         console.log(newProject);
 
-        // Display the new project
         displayProject(titleNameInputValue);
 
-        // Remove the event listener if it's no longer needed
-        submitButton.removeEventListener("click", handleClick);
+    
+
     }
 }

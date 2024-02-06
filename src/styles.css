@@ -21,13 +21,14 @@ grid-template-columns: 2fr 4fr;
     grid-column: 1 / 2;
     background-color: pink;
     margin: 1rem;
-    display: grid;
-    grid-template-rows: 7fr 1fr;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    
 }
 
 #todos {
-    grid-column: 2 / 3;
     background-color: grey;
     margin: 1rem;
 
@@ -44,7 +45,6 @@ grid-template-columns: 2fr 4fr;
     width: 6rem;
     height: 3rem;
     margin: 1rem;
-    grid-row: 1 / 2;
 }
 
 #projectDialogCloseButton {
@@ -71,3 +71,4 @@ dialog #projectdialog {
     background-color: darkgrey;
     opacity: 70%;
 }
+

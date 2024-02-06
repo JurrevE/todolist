@@ -5,7 +5,7 @@ import { setPriorityToHigh, setPriorityToMedium, setPriorityToLow } from "./prio
 import { toggleCompletionStatus } from "./completionSwitcher";
 import { displayProject } from "./displayProject";
 import { addBtnFunc } from "./addBtnFunc";
-import { SubmitBtnFunc } from "./submitBtnFunc";
+import { SubmitBtnFunc } from "./SubmitBtnFunc.js";
 
 
 addBtnFunc()
