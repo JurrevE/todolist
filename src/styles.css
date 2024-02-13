@@ -73,8 +73,22 @@ dialog #projectdialog {
     opacity: 70%;
 }
 
-#showprojectdiv {
-    background-color: yellow;
-    width: 10rem;
-    height: 10rem;
-}
+#visibleprojectmodal {
+    
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 150;
+        top: 200;
+        width: 60%; /* Full width */
+        height: 60%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: lightblue; /* Black w/ opacity */
+        padding-top: 60px; /* Location of the box */
+    }
+
+    .projectmodalclosebtn {
+        width: 10rem;
+        height: 5rem;
+        background-color: red;
+    }
