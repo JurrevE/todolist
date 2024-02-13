@@ -25,6 +25,7 @@ export function addProjectBtnFunc() {
                     showprojectmodal.setAttribute("id", "visibleprojectmodal");
                    let projectmodalclosebtn = document.createElement("button")
                     projectmodalclosebtn.classList.add("projectmodalclosebtn")
+                    projectmodalclosebtn.innerText = "X"
                     projectmodalclosebtn.addEventListener("click", closeModal)
                     showprojectmodal.append(projectmodalclosebtn)
                     let maincontent = document.getElementById("todos");
