@@ -74,22 +74,17 @@ dialog #projectdialog {
 }
 
 #visibleprojectmodal {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        z-index: 1; /* Sit on top */
-        left: 150;
-        top: 200;
-        width: 60%; /* Full width */
-        height: 60%; /* Full height */
-        background-color: lightblue; /* Black w/ opacity */
-    }
+    background-color: lightblue;
+    height: 80%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    
+}
 
     .projectmodalclosebtn {
         width: 10rem;
         height: 5rem;
         background-color: red;
-        align-self: flex-start;
         font-size: xx-large;
     }
