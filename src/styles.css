@@ -75,10 +75,11 @@ dialog #projectdialog {
 
 #visibleprojectmodal {
     background-color: lightblue;
-    height: 80%;
+    height: 100%;
     width: 100%;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
     
 }
 
@@ -87,4 +88,23 @@ dialog #projectdialog {
         height: 5rem;
         background-color: red;
         font-size: xx-large;
+    }
+
+    #projectmodalname {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 20%;
+        width: 50%;
+        font-size: x-large;
+    }
+
+    #projectmodaltodos {
+        background-color: white;
+        height: 100%;
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-self: flex-start;
+        align-items: center;
     }

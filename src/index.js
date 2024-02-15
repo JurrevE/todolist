@@ -7,6 +7,7 @@ import { displayProject } from "./displayProject";
 import { addBtnFunc } from "./addBtnFunc";
 import { SubmitBtnFunc } from "./SubmitBtnFunc.js";
 import { addProjectBtnFunc } from "./projectBtnFunc.js";
+import { displaytodos } from "./displaytodos.js";
 
 
 addBtnFunc()
@@ -27,6 +28,8 @@ console.log(todo1)
 console.log(todo3)
 setPriorityToMedium(todo3)
 toggleCompletionStatus(todo3)
+
+
 
 
 

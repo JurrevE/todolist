@@ -1,3 +1,4 @@
+import { displaytodos } from "./displaytodos.js";
 export function addProjectBtnFunc() {
     let projectbuttons = document.getElementsByClassName("projectbuttons");
     
@@ -27,17 +28,27 @@ export function addProjectBtnFunc() {
             projectbuttons[i].addEventListener('click', function() {
                 let projectName = this.innerHTML; // Get project name from clicked button
                 let showprojectmodal = document.getElementById("visibleprojectmodal");
+
                 if (!showprojectmodal) {
                     showprojectmodal = document.createElement("div");
                     showprojectmodal.setAttribute("id", "visibleprojectmodal");
+
                     let projectmodalclosebtn = document.createElement("button");
                     projectmodalclosebtn.classList.add("projectmodalclosebtn");
                     projectmodalclosebtn.innerText = "X";
                     projectmodalclosebtn.addEventListener("click", closeModal);
+
                     let projectmodalname = document.createElement("div");
                     projectmodalname.setAttribute("id", "projectmodalname");
                     projectmodalname.innerHTML = projectName; // Set project name
-                    showprojectmodal.append(projectmodalclosebtn, projectmodalname);
+
+                    let projectmodaltodos = document.createElement("div")
+                    projectmodaltodos.setAttribute("id", "projectmodaltodos")
+
+                    displaytodos()
+
+                    showprojectmodal.append(projectmodalclosebtn, projectmodalname, projectmodaltodos);
+                    
                     let maincontent = document.getElementById("todos");
                     maincontent.appendChild(showprojectmodal);
                 }
