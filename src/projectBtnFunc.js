@@ -1,4 +1,3 @@
-import { displaytodos } from "./displaytodos.js";
 export function addProjectBtnFunc() {
     let projectbuttons = document.getElementsByClassName("projectbuttons");
     
@@ -45,7 +44,6 @@ export function addProjectBtnFunc() {
                     let projectmodaltodos = document.createElement("div")
                     projectmodaltodos.setAttribute("id", "projectmodaltodos")
 
-                    displaytodos()
 
                     showprojectmodal.append(projectmodalclosebtn, projectmodalname, projectmodaltodos);
                     
