@@ -1,6 +1,7 @@
 import { displayProject } from "./displayProject";
 import { createProject } from "./createProject";
 import { addProjectBtnFunc } from "./projectBtnFunc";
+import differentprojects from ".";
 
 export function SubmitBtnFunc() {
     let submitButton = document.getElementById("submitbutton");
@@ -20,7 +21,9 @@ export function SubmitBtnFunc() {
         projectTitle.value = "";
 
         newProject = new createProjectResult.project(titleNameInputValue);
+        differentprojects.push(newProject)
         console.log(newProject);
+        console.log(differentprojects)
 
         displayProject(titleNameInputValue);
 

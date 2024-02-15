@@ -15,6 +15,7 @@ SubmitBtnFunc()
 
 let { project } = createProject();
 let differentprojects = []
+export default differentprojects
 console.log(differentprojects, "kanker")
 
 let todo1 = new todo("Homework", "right now", "before I die", "high", "heel moeilijk");
