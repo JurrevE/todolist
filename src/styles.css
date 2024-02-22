@@ -108,3 +108,10 @@ dialog #projectdialog {
         justify-self: flex-start;
         align-items: center;
     }
+
+    #deleteprojectbtn {
+        background-color: purple; 
+        width: 10rem;
+        height: 5rem;
+
+    }

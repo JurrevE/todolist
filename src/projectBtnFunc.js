@@ -1,3 +1,5 @@
+import differentprojects from ".";
+
 export function addProjectBtnFunc() {
     let projectbuttons = document.getElementsByClassName("projectbuttons");
     
@@ -18,6 +20,27 @@ export function addProjectBtnFunc() {
         let projectmodalname = document.getElementById("projectmodalname");
         projectmodalname.innerHTML = "";
     }
+
+    function deleteProject() {
+        let projectName = document.getElementById("projectmodalname").innerText;
+    
+        let projectindex = differentprojects.indexOf(projectName);
+        if (projectindex !== -1) {
+            differentprojects.splice(projectindex, 1);
+        }
+    
+        let projectbuttons = document.getElementsByClassName("projectbuttons");
+        for (let i = 0; i < projectbuttons.length; i++) {
+            if (projectbuttons[i].innerText === projectName) {
+                projectbuttons[i].parentNode.removeChild(projectbuttons[i]);
+                break; // Assuming each project name is unique, no need to continue loop once removed
+            }
+        }
+    
+        closeModal();
+        console.log(differentprojects);
+    }
+    
     
     // Loop through the created buttons, add event listeners
     for (let i = 0; i < projectbuttons.length; i++) {
@@ -44,8 +67,13 @@ export function addProjectBtnFunc() {
                     let projectmodaltodos = document.createElement("div")
                     projectmodaltodos.setAttribute("id", "projectmodaltodos")
 
+                    let deleteprojectbtn = document.createElement("button");
+                    deleteprojectbtn.setAttribute("id", "deleteprojectbtn");
+                    deleteprojectbtn.innerText = "Delete project";
+                    deleteprojectbtn.addEventListener("click", deleteProject);
 
-                    showprojectmodal.append(projectmodalclosebtn, projectmodalname, projectmodaltodos);
+
+                    showprojectmodal.append(projectmodalclosebtn, projectmodalname, projectmodaltodos, deleteprojectbtn);
                     
                     let maincontent = document.getElementById("todos");
                     maincontent.appendChild(showprojectmodal);
