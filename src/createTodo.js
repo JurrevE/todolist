@@ -8,5 +8,4 @@ class todo {
         this.completionStatus = false
     }
 }
-const defaultTodo = new todo("Default Todo", "Default description", "Default due date", "low", "Default notes");
-export { todo, defaultTodo };
+export { todo };

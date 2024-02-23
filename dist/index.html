@@ -16,6 +16,31 @@
             <button id="submitbutton">Submit</button>
             </form>
         </dialog>
+
+
+        <dialog id="todoDialog">
+            <button id="todoDialogCloseButton">X</button>
+            <form action="post" id=todoform>
+                <label for="todoTitle">New Todo</label>
+                <input type="text" id="todoTitle">
+                <label for="todoDescription">Description</label>
+                <input type="text" id="todoDescription">
+                <label for="dueDate">Due Date</label>
+                <input type="text" id="dueDate">
+                <label for="priority">priority</label>
+                <input type="radio" name="priority" id="low" value="low" >
+                <label for="low">low^</label>
+                <input type="radio" name="priority" id="medium" value="medium">
+                <label for="medium">medium^</label>
+                <input type="radio" name="priority" id="high" value="high">
+                <label for="high">high^</label>
+                <label for="notes">notes</label>
+                <input type="text" id="notes">
+                
+                
+                <button id="todosubmitbutton">Submit</button>
+                </form>
+            </dialog>
         
     <div id="maincontent">
 
@@ -23,6 +48,8 @@
 
         </div>
         <div id="todos">
+            <button id="addTodoBtn">Add Todo</button>
+
 
         </div>
     </div>

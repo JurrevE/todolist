@@ -31,6 +31,10 @@ grid-template-columns: 2fr 4fr;
 #todos {
     background-color: grey;
     margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 
 }
 #addProjectBtn {
@@ -38,6 +42,15 @@ grid-template-columns: 2fr 4fr;
     height: 3rem;
     margin: 1rem;
     background-color: blue;
+    color: white;
+    font-size: large;
+}
+
+#addTodoBtn {
+    width: 6rem;
+    height: 3rem;
+    margin: 1rem;
+    background-color: red;
     color: white;
     font-size: large;
 }
@@ -115,3 +128,17 @@ dialog #projectdialog {
         height: 5rem;
 
     }
+    
+
+    #todoform {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #todoDialogCloseButton {
+            height: 2rem;
+            width: 2rem;
+            background-color: blueviolet;
+        }
+  
