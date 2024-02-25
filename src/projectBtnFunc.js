@@ -1,4 +1,8 @@
 import differentprojects from ".";
+import { addTodoBtnFunc } from "./AddTodoBtnFunc"; 
+import { todoSubmitBtnFunc } from "./todoSubmitBtnFunc";
+
+
 
 export function addProjectBtnFunc() {
     let projectbuttons = document.getElementsByClassName("projectbuttons");
@@ -60,6 +64,10 @@ export function addProjectBtnFunc() {
                     projectmodalclosebtn.innerText = "X";
                     projectmodalclosebtn.addEventListener("click", closeModal);
 
+                    let projectmodaladdtodobtn = document.createElement("button");
+                    projectmodaladdtodobtn.setAttribute("id", "projectmodaladdtodobtn")
+                    projectmodaladdtodobtn.innerText = "add todo"
+                    
                     let projectmodalname = document.createElement("div");
                     projectmodalname.setAttribute("id", "projectmodalname");
                     projectmodalname.innerHTML = projectName; // Set project name
@@ -73,12 +81,14 @@ export function addProjectBtnFunc() {
                     deleteprojectbtn.addEventListener("click", deleteProject);
 
 
-                    showprojectmodal.append(projectmodalclosebtn, projectmodalname, projectmodaltodos, deleteprojectbtn);
+                    showprojectmodal.append(projectmodalclosebtn, projectmodaladdtodobtn, projectmodalname, projectmodaltodos, deleteprojectbtn);
                     
                     let maincontent = document.getElementById("todos");
                     maincontent.appendChild(showprojectmodal);
                 }
                 openModal(projectName); // Open modal with correct project name
+                addTodoBtnFunc()
+                todoSubmitBtnFunc()
             });
         }
     }

@@ -1,6 +1,6 @@
 
 export function addTodoBtnFunc() {
-    let addTodoBtn = document.getElementById("addTodoBtn")
+    let addTodoBtn = document.getElementById("projectmodaladdtodobtn")
     let todoDialog = document.getElementById("todoDialog")
     let todoDialogCloseBtn = document.getElementById("todoDialogCloseButton")
     let todoTitle = document.getElementById("todoTitle")

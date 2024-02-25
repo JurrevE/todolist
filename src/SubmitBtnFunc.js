@@ -1,13 +1,14 @@
-import { displayProject } from "./displayProject";
-import { createProject } from "./createProject";
 import { addProjectBtnFunc } from "./projectBtnFunc";
 import differentprojects from ".";
+import { createProject } from "./createProject";
+import { displayProject } from "./displayProject";
+
+let newProject; // Define newProject in the outer scope of the module
 
 export function SubmitBtnFunc() {
     let submitButton = document.getElementById("submitbutton");
     let projectTitle = document.getElementById("projectTitle");
     let createProjectResult = createProject();
-    let newProject;
 
     submitButton.addEventListener("click", handleClick);
 
@@ -21,13 +22,15 @@ export function SubmitBtnFunc() {
         projectTitle.value = "";
 
         newProject = new createProjectResult.project(titleNameInputValue);
-        differentprojects.push(newProject)
+        differentprojects.push(newProject);
         console.log(newProject);
-        console.log(differentprojects)
-
+        console.log(differentprojects);
+     
         displayProject(titleNameInputValue);
 
-        addProjectBtnFunc()
+        addProjectBtnFunc();
 
     }
 }
+
+export { newProject }; 

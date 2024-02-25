@@ -142,3 +142,11 @@ dialog #projectdialog {
             background-color: blueviolet;
         }
   
+    #projectmodaladdtodobtn {
+        margin-top: 2rem;
+        width: 10rem;
+        height: 5rem;
+        background-color: green;
+        font-size: xx-large;
+
+    }

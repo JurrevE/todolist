@@ -14,8 +14,6 @@ import { todoSubmitBtnFunc } from "./todoSubmitBtnFunc.js";
 
 addBtnFunc()
 SubmitBtnFunc()
-addTodoBtnFunc()
-todoSubmitBtnFunc()
 let { project } = createProject();
 let differentprojects = []
 export default differentprojects
