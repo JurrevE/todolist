@@ -40,7 +40,6 @@ export function todoSubmitBtnFunc() {
             console.log(newTodo);
             if (newProject && Array.isArray(newProject.todos)) {
                 newProject.todos.push(newTodo);
-                displaytodos();
             } else {
                 console.error("newProject or newProject.todos is not properly defined");
             }
@@ -52,6 +51,8 @@ export function todoSubmitBtnFunc() {
             todoPriority.forEach((radio) => (radio.checked = false));
 
             tododialog.close();
+            
+            displaytodos()
         });
 
         listeneradded = true; 
