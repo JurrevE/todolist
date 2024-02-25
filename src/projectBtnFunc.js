@@ -3,27 +3,26 @@ import { addTodoBtnFunc } from "./AddTodoBtnFunc";
 import { todoSubmitBtnFunc } from "./todoSubmitBtnFunc";
 import { displaytodos } from "./displaytodos";
 
-
-
 export function addProjectBtnFunc() {
     let projectbuttons = document.getElementsByClassName("projectbuttons");
+    let functionsAdded = false; // Initialize the flag
     
-    // Helper function to open the modal
     function openModal(projectName) {
         let showprojectmodal = document.getElementById("visibleprojectmodal");
         if (showprojectmodal) {
             showprojectmodal.style.display = "inline-flex";
             let projectmodalname = document.getElementById("projectmodalname");
-            projectmodalname.innerHTML = projectName; // Update project name
+            projectmodalname.innerHTML = projectName; 
         }
     }
     
-    // Helper function to close the modal
     function closeModal() {
         let showprojectmodal = document.getElementById("visibleprojectmodal");
         showprojectmodal.style.display = "none";
         let projectmodalname = document.getElementById("projectmodalname");
         projectmodalname.innerHTML = "";
+        let projectmodals = document.getElementById("projectmodaltodos")
+        projectmodals.removeChild()
     }
 
     function deleteProject() {
@@ -46,14 +45,12 @@ export function addProjectBtnFunc() {
         console.log(differentprojects);
     }
     
-    
-    // Loop through the created buttons, add event listeners
     for (let i = 0; i < projectbuttons.length; i++) {
         if (!projectbuttons[i].hasAttribute("data-clicked")) {
             projectbuttons[i].setAttribute("data-clicked", "true");
             
             projectbuttons[i].addEventListener('click', function() {
-                let projectName = this.innerHTML; // Get project name from clicked button
+                let projectName = this.innerHTML; 
                 let showprojectmodal = document.getElementById("visibleprojectmodal");
 
                 if (!showprojectmodal) {
@@ -71,7 +68,7 @@ export function addProjectBtnFunc() {
                     
                     let projectmodalname = document.createElement("div");
                     projectmodalname.setAttribute("id", "projectmodalname");
-                    projectmodalname.innerHTML = projectName; // Set project name
+                    projectmodalname.innerHTML = projectName; 
 
                     let projectmodaltodos = document.createElement("div")
                     projectmodaltodos.setAttribute("id", "projectmodaltodos")
@@ -81,24 +78,20 @@ export function addProjectBtnFunc() {
                     deleteprojectbtn.innerText = "Delete project";
                     deleteprojectbtn.addEventListener("click", deleteProject);
 
-
                     showprojectmodal.append(projectmodalclosebtn, projectmodaladdtodobtn, projectmodalname, projectmodaltodos, deleteprojectbtn);
                     
-
                     let maincontent = document.getElementById("todos");
                     maincontent.appendChild(showprojectmodal);
-                    
                 }
                 
-                let functionsAdded = false;
-
-                openModal(projectName);
-
+                // Check if functions have already been added
                 if (!functionsAdded) {
                     addTodoBtnFunc();
                     todoSubmitBtnFunc();
-                    functionsAdded = true;
+                    functionsAdded = true; // Set the flag to true after adding functions
                 }
+                
+                openModal(projectName);
             });
         }
     }
