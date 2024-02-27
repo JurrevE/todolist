@@ -1,14 +1,14 @@
-import { newProject } from "./SubmitBtnFunc"
-import { newTodo } from "./todoSubmitBtnFunc"
+import { newProject } from "./SubmitBtnFunc";
 
 export function displaytodos() {
-    for ( let i = 0; i < newProject.todos.length; i++) {
-        let projectmodaltododiv = document.getElementById("projectmodaltodos")
-        let tododiv = document.createElement("div")
-        tododiv.classList.add("tododiv")
-        tododiv.innerHTML = newTodo.title
-        projectmodaltododiv.append(tododiv)
-        
-    }
+    let projectmodaltododiv = document.getElementById("projectmodaltodos");
+    projectmodaltododiv.innerHTML = ""; // Clearing content before adding new todos
 
+    for (let i = 0; i < newProject.todos.length; i++) {
+        let tododiv = document.createElement("div");
+        tododiv.classList.add("tododiv");
+        tododiv.innerHTML = newProject.todos[i].title; // Accessing todo title from the newProject.todos array
+        projectmodaltododiv.append(tododiv);
+    }
+    console.log("Ik log nu de todos!");
 }

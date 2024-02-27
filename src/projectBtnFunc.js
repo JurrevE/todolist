@@ -13,6 +13,8 @@ export function addProjectBtnFunc() {
             showprojectmodal.style.display = "inline-flex";
             let projectmodalname = document.getElementById("projectmodalname");
             projectmodalname.innerHTML = projectName; 
+            projectmodaltodos.innerHTML = ""
+                displaytodos()
         }
     }
     
@@ -22,7 +24,7 @@ export function addProjectBtnFunc() {
         let projectmodalname = document.getElementById("projectmodalname");
         projectmodalname.innerHTML = "";
         let projectmodals = document.getElementById("projectmodaltodos")
-        projectmodals.removeChild()
+        projectmodals.innerHTML = ""
     }
 
     function deleteProject() {
@@ -92,6 +94,7 @@ export function addProjectBtnFunc() {
                 }
                 
                 openModal(projectName);
+                
             });
         }
     }
