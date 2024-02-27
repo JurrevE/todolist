@@ -13,4 +13,5 @@ export function displaytodos() {
     }
 
     console.log("Ik log nu de todos!");
+    console.log("shit proberen te fixen met verschillende branches")
 }
