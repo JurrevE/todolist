@@ -13,8 +13,7 @@ export function addProjectBtnFunc() {
             showprojectmodal.style.display = "inline-flex";
             let projectmodalname = document.getElementById("projectmodalname");
             projectmodalname.innerHTML = projectName; 
-            projectmodaltodos.innerHTML = ""
-                displaytodos()
+            displaytodos()
         }
     }
     
@@ -24,7 +23,7 @@ export function addProjectBtnFunc() {
         let projectmodalname = document.getElementById("projectmodalname");
         projectmodalname.innerHTML = "";
         let projectmodals = document.getElementById("projectmodaltodos")
-        projectmodals.innerHTML = ""
+        projectmodals.removeChild()
     }
 
     function deleteProject() {
@@ -93,8 +92,8 @@ export function addProjectBtnFunc() {
                     functionsAdded = true; // Set the flag to true after adding functions
                 }
                 
+                projectmodaltodos.innerHTML = ""
                 openModal(projectName);
-                
             });
         }
     }
