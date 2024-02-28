@@ -1,4 +1,6 @@
 import { newProject } from "./SubmitBtnFunc";
+import differentprojects from ".";
+import { projectName } from "./projectBtnFunc";
 
 export function displaytodos() {
     let projectmodaltododiv = document.getElementById("projectmodaltodos");
@@ -13,5 +15,5 @@ export function displaytodos() {
     }
 
     console.log("Ik log nu de todos!");
-    console.log("shit proberen te fixen met verschillende branches")
 }
+

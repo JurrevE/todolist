@@ -3,6 +3,7 @@ import { addTodoBtnFunc } from "./AddTodoBtnFunc";
 import { todoSubmitBtnFunc } from "./todoSubmitBtnFunc";
 import { displaytodos } from "./displaytodos";
 
+let projectName;
 export function addProjectBtnFunc() {
     let projectbuttons = document.getElementsByClassName("projectbuttons");
     let functionsAdded = false; // Initialize the flag
@@ -13,7 +14,7 @@ export function addProjectBtnFunc() {
             showprojectmodal.style.display = "inline-flex";
             let projectmodalname = document.getElementById("projectmodalname");
             projectmodalname.innerHTML = projectName; 
-            displaytodos()
+            displaytodos(projectmodalname)
         }
     }
     
@@ -23,7 +24,8 @@ export function addProjectBtnFunc() {
         let projectmodalname = document.getElementById("projectmodalname");
         projectmodalname.innerHTML = "";
         let projectmodals = document.getElementById("projectmodaltodos")
-        projectmodals.removeChild()
+        projectmodals.innerHTML = ""
+        
     }
 
     function deleteProject() {
@@ -98,3 +100,4 @@ export function addProjectBtnFunc() {
         }
     }
 }
+export { projectName } 
