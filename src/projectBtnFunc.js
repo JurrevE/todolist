@@ -15,7 +15,7 @@ export function addProjectBtnFunc() {
             showprojectmodal.style.display = "inline-flex";
             let projectmodalname = document.getElementById("projectmodalname");
             projectmodalname.innerHTML = projectName; 
-            displaytodos(projectmodalname)
+            displaytodos()
         }
     }
     
@@ -98,6 +98,7 @@ export function addProjectBtnFunc() {
                 
                 projectmodaltodos.innerHTML = ""
                 openModal(projectName);
+                
             });
         }
     }

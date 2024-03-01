@@ -1,15 +1,15 @@
+import { createProject } from "./createProject"; // Import createProject function
 import { addProjectBtnFunc } from "./projectBtnFunc";
-import differentprojects from ".";
-import { createProject } from "./createProject";
 import { displayProject } from "./displayProject";
+import differentprojects from ".";
+import { Project } from "./createProject";
 
 let newProject; // Define newProject in the outer scope of the module
 
 export function SubmitBtnFunc() {
     let submitButton = document.getElementById("submitbutton");
     let projectTitle = document.getElementById("projectTitle");
-    let createProjectResult = createProject();
-
+    
     submitButton.addEventListener("click", handleClick);
 
     function handleClick(event) {
@@ -20,8 +20,8 @@ export function SubmitBtnFunc() {
 
         projectdialog.close();
         projectTitle.value = "";
-
-        newProject = new createProjectResult.project(titleNameInputValue);
+        
+        newProject = new Project(titleNameInputValue); // Fix typo here
         differentprojects.push(newProject);
         console.log(newProject);
         console.log(differentprojects);
@@ -29,8 +29,7 @@ export function SubmitBtnFunc() {
         displayProject(titleNameInputValue);
 
         addProjectBtnFunc();
-
     }
 }
+export { newProject }
 
-export { newProject }; 

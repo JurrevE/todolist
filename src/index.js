@@ -1,6 +1,6 @@
 import "./styles.css"
 import { todo } from "./createTodo";
-import { createProject } from "./createProject";
+
 import { setPriorityToHigh, setPriorityToMedium, setPriorityToLow } from "./prioritySwitcher";
 import { toggleCompletionStatus } from "./completionSwitcher";
 import { displayProject } from "./displayProject";
@@ -14,7 +14,7 @@ import { todoSubmitBtnFunc } from "./todoSubmitBtnFunc.js";
 
 addBtnFunc()
 SubmitBtnFunc()
-let { project } = createProject();
+
 let differentprojects = []
 export default differentprojects
 console.log(differentprojects, "Dit is de array met standaard projects erin")
