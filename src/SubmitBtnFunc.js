@@ -1,11 +1,10 @@
-import { createProject } from "./createProject"; // Import createProject function
+import { createProject } from "./createProject"; 
 import { addProjectBtnFunc } from "./projectBtnFunc";
 import { displayProject } from "./displayProject";
 import differentprojects from ".";
 import { Project } from "./createProject";
 
-
-let newProject; // Define newProject in the outer scope of the module
+let newProject; 
 
 export function SubmitBtnFunc() {
     let submitButton = document.getElementById("submitbutton");
@@ -17,20 +16,17 @@ export function SubmitBtnFunc() {
         event.preventDefault();
 
         let titleNameInputValue = projectTitle.value;
-        console.log(titleNameInputValue);
 
         projectdialog.close();
         projectTitle.value = "";
         
-        newProject = new Project(titleNameInputValue); // Fix typo here
-        differentprojects.project1 = newProject.title
-        console.log(newProject);
-        console.log(differentprojects);
-     
+        newProject = new Project(titleNameInputValue);
+        differentprojects[newProject.title] = newProject; // Use project title as the key
+
         displayProject(titleNameInputValue);
 
         addProjectBtnFunc();
+        console.log(differentprojects);
     }
 }
 export { newProject }
-

@@ -1,6 +1,6 @@
 import { todo } from "./createTodo";
-import { newProject } from "./SubmitBtnFunc";
 import { displaytodos } from "./displaytodos";
+import differentprojects from ".";
 
 let newTodo;
 let listeneradded = false;
@@ -17,7 +17,7 @@ export function todoSubmitBtnFunc() {
     if (!listeneradded) {
         todosubmitbutton.addEventListener("click", function (event) {
             event.preventDefault();
-            console.log("eventlistener added!")
+            console.log("eventlistener added!");
 
             let title = todoTitle.value;
             let description = todoDescription.value;
@@ -39,11 +39,16 @@ export function todoSubmitBtnFunc() {
 
             newTodo = new todo(title, description, dueDate, priority, notes);
             console.log(newTodo);
-            if (newProject && Array.isArray(newProject.todos)) {
-                newProject.todos.push(newTodo);
-                console.log(newProject)
+
+            // Find the correct project based on the project name
+            let projectName = document.getElementById("projectmodalname").innerText;
+            let project = differentprojects[projectName];
+
+            if (project && Array.isArray(project.todos)) {
+                project.todos.push(newTodo);
+                console.log(project);
             } else {
-                console.error("newProject or newProject.todos is not properly defined");
+                console.error(`Project ${projectName} or its todos is not properly defined`);
             }
 
             todoTitle.value = "";
@@ -53,11 +58,10 @@ export function todoSubmitBtnFunc() {
             todoPriority.forEach((radio) => (radio.checked = false));
 
             tododialog.close();
-            displaytodos()
-            
+            displaytodos();
         });
-      
-        listeneradded = true; 
+
+        listeneradded = true;
         console.log(listeneradded);
     }
 }

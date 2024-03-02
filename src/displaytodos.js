@@ -1,28 +1,26 @@
-import { newProject } from "./SubmitBtnFunc";
 import differentprojects from ".";
-import { projectName } from "./projectBtnFunc";
-
 export function displaytodos() {
     let projectmodaltododiv = document.getElementById("projectmodaltodos");
     projectmodaltododiv.innerHTML = ""; // Clear existing content before displaying todos
 
-    
-    let todos = newProject.todos
-    for (let i = 0; i < todos.length; i++) {
-        let tododiv = document.createElement("div")
-    tododiv.classList.add("tododiv")
-    tododiv.innerHTML = todos[i].title 
-    projectmodaltododiv.appendChild(tododiv)
+    let projectName = document.getElementById("projectmodalname").innerText;
+    let project = differentprojects[projectName];
+
+    // Log project.todos for debugging
+    console.log("Project Todos:", project.todos);
+
+    for (let i = 0; i < project.todos.length; i++) {
+        let tododiv = document.createElement("div");
+        tododiv.classList.add("tododiv");
+
+        // Check if the title property exists
+        if (project.todos[i].title) {
+            tododiv.innerHTML = project.todos[i].title;
+        } else {
+            // Log error if title property is missing
+            console.error("Title property is missing in todo object:", project.todos[i]);
+        }
+
+        projectmodaltododiv.appendChild(tododiv);
     }
-
-    // // Iterate over todos in newProject.todos array
-    // for (let i = 0; i < newProject.todos.length; i++) {
-    //     let tododiv = document.createElement("div");
-    //     tododiv.classList.add("tododiv");
-    //     tododiv.innerHTML = newProject.todos[i].title; // Access the title property of each todo
-    //     projectmodaltododiv.appendChild(tododiv);
-    // }
-
-    // console.log("Ik log nu de todos!");
 }
-

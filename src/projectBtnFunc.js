@@ -52,7 +52,7 @@ export function addProjectBtnFunc() {
     for (let i = 0; i < projectbuttons.length; i++) {
         if (!projectbuttons[i].hasAttribute("data-clicked")) {
             projectbuttons[i].setAttribute("data-clicked", "true");
-            projectbuttons[i].setAttribute("id", newProject.id)
+            projectbuttons[i].setAttribute("data-project-button", newProject.data)
             
             projectbuttons[i].addEventListener('click', function() {
                 let projectName = this.innerHTML; 
