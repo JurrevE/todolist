@@ -1,4 +1,5 @@
 import differentprojects from ".";
+import { deleteTodo } from "./deleteTodo";
 
 export function displaytodos() {
     let projectmodaltododiv = document.getElementById("projectmodaltodos");
@@ -14,7 +15,7 @@ export function displaytodos() {
     for (let i = 0; i < project.todos.length; i++) {
         let tododiv = document.createElement("div");
         let tododivbutton = document.createElement("button");
-        tododivbutton.innerHTML = "X";
+        tododivbutton.innerHTML = "Delete Todo";
         tododivbutton.classList.add("delete-todo-btn")
         tododivbutton.setAttribute("data-del-button", deletebuttoncounter); // Add a class for styling or event handling
         deletebuttoncounter++
@@ -32,5 +33,6 @@ export function displaytodos() {
         }
 
         projectmodaltododiv.appendChild(tododiv);
+        deleteTodo()
     }
 }
