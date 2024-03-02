@@ -1,4 +1,3 @@
-import { createProject } from "./createProject"; 
 import { addProjectBtnFunc } from "./projectBtnFunc";
 import { displayProject } from "./displayProject";
 import differentprojects from ".";

@@ -15,7 +15,9 @@ export function displaytodos() {
         let tododiv = document.createElement("div");
         let tododivbutton = document.createElement("button");
         tododivbutton.innerHTML = "X";
-        tododivbutton.classList.add("delete-todo-btn"); // Add a class for styling or event handling
+        tododivbutton.classList.add("delete-todo-btn")
+        tododivbutton.setAttribute("data-del-button", deletebuttoncounter); // Add a class for styling or event handling
+        deletebuttoncounter++
         tododiv.classList.add("tododiv");
         tododiv.appendChild(tododivbutton); // Append the delete button to tododiv
 
