@@ -1,16 +1,16 @@
-export function createProject() {
-    class project {
-        constructor (title) {
-            this.title = title
-            this.todos = []
-        }
-        addTodo(todo) {
-            this.todos.push(todo);
-        }
-        
+let projectcounter = 0;
+
+class Project {
+    constructor(title) {
+        this.title = title;
+        this.todos = [];
+        this.data = "proj" + projectcounter; // Assign data attribute
+        projectcounter++;
     }
-    
-    return {project}
+
+    addTodo(todo) {
+        this.todos.push(todo);
+    }
 }
 
- 
+export { Project };

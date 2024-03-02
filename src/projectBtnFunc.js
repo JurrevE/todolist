@@ -2,6 +2,7 @@ import differentprojects from ".";
 import { addTodoBtnFunc } from "./AddTodoBtnFunc"; 
 import { todoSubmitBtnFunc } from "./todoSubmitBtnFunc";
 import { displaytodos } from "./displaytodos";
+import { newProject } from "./SubmitBtnFunc";
 
 let projectName;
 export function addProjectBtnFunc() {
@@ -14,7 +15,7 @@ export function addProjectBtnFunc() {
             showprojectmodal.style.display = "inline-flex";
             let projectmodalname = document.getElementById("projectmodalname");
             projectmodalname.innerHTML = projectName; 
-            displaytodos(projectmodalname)
+            displaytodos()
         }
     }
     
@@ -51,6 +52,7 @@ export function addProjectBtnFunc() {
     for (let i = 0; i < projectbuttons.length; i++) {
         if (!projectbuttons[i].hasAttribute("data-clicked")) {
             projectbuttons[i].setAttribute("data-clicked", "true");
+            projectbuttons[i].setAttribute("id", newProject.id)
             
             projectbuttons[i].addEventListener('click', function() {
                 let projectName = this.innerHTML; 
@@ -96,6 +98,7 @@ export function addProjectBtnFunc() {
                 
                 projectmodaltodos.innerHTML = ""
                 openModal(projectName);
+                
             });
         }
     }
