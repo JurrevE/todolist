@@ -15,9 +15,9 @@ import { todoSubmitBtnFunc } from "./todoSubmitBtnFunc.js";
 addBtnFunc()
 SubmitBtnFunc()
 
-let differentprojects = []
+let differentprojects = {} 
 export default differentprojects
-console.log(differentprojects, "Dit is de array met standaard projects erin")
+console.log(differentprojects, "Dit is een object waar de projects in zitten.")
 
 // let todo1 = new todo("Homework", "right now", "before I die", "high", "heel moeilijk");
 // let todo2 = new todo("Monkey", "rn", "before I die", "low", "niet zo moeilijk");

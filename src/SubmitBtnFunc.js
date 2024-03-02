@@ -4,6 +4,7 @@ import { displayProject } from "./displayProject";
 import differentprojects from ".";
 import { Project } from "./createProject";
 
+
 let newProject; // Define newProject in the outer scope of the module
 
 export function SubmitBtnFunc() {
@@ -22,7 +23,7 @@ export function SubmitBtnFunc() {
         projectTitle.value = "";
         
         newProject = new Project(titleNameInputValue); // Fix typo here
-        differentprojects.push(newProject);
+        differentprojects.project1 = newProject.title
         console.log(newProject);
         console.log(differentprojects);
      
