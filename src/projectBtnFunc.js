@@ -5,6 +5,15 @@ import { displaytodos } from "./displaytodos";
 import { newProject } from "./SubmitBtnFunc";
 
 let projectName;
+export function closeModal() {
+    let showprojectmodal = document.getElementById("visibleprojectmodal");
+    showprojectmodal.style.display = "none";
+    let projectmodalname = document.getElementById("projectmodalname");
+    projectmodalname.innerHTML = "";
+    let projectmodals = document.getElementById("projectmodaltodos")
+    projectmodals.innerHTML = ""
+    
+}
 export function addProjectBtnFunc() {
     let projectbuttons = document.getElementsByClassName("projectbuttons");
     let functionsAdded = false; // Initialize the flag
@@ -19,15 +28,6 @@ export function addProjectBtnFunc() {
         }
     }
     
-    function closeModal() {
-        let showprojectmodal = document.getElementById("visibleprojectmodal");
-        showprojectmodal.style.display = "none";
-        let projectmodalname = document.getElementById("projectmodalname");
-        projectmodalname.innerHTML = "";
-        let projectmodals = document.getElementById("projectmodaltodos")
-        projectmodals.innerHTML = ""
-        
-    }
 
     function deleteProject() {
         let projectName = document.getElementById("projectmodalname").innerText;

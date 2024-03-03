@@ -1,5 +1,6 @@
 import differentprojects from ".";
 import { deleteTodo } from "./deleteTodo";
+import { addexpandbtnfunc } from "./expandtodobtnfunc";
 
 export function displaytodos() {
     let projectmodaltododiv = document.getElementById("projectmodaltodos");
@@ -7,7 +8,7 @@ export function displaytodos() {
 
     let projectName = document.getElementById("projectmodalname").innerText;
     let project = differentprojects[projectName];
-    let deletebuttoncounter = 0
+    let expandbuttoncounter = 0
 
     // Log project.todos for debugging
     console.log("Project Todos:", project.todos);
@@ -15,10 +16,10 @@ export function displaytodos() {
     for (let i = 0; i < project.todos.length; i++) {
         let tododiv = document.createElement("div");
         let tododivbutton = document.createElement("button");
-        tododivbutton.innerHTML = "Delete Todo";
-        tododivbutton.classList.add("delete-todo-btn")
-        tododivbutton.setAttribute("data-del-button", deletebuttoncounter); // Add a class for styling or event handling
-        deletebuttoncounter++
+        tododivbutton.innerHTML = "Expand todo";
+        tododivbutton.classList.add("expand-todo-btn")
+        tododivbutton.setAttribute("data-expand-button", expandbuttoncounter); // Add a class for styling or event handling
+        expandbuttoncounter++
         tododiv.classList.add("tododiv");
         tododiv.appendChild(tododivbutton); // Append the delete button to tododiv
 
@@ -34,5 +35,6 @@ export function displaytodos() {
 
         projectmodaltododiv.appendChild(tododiv);
         deleteTodo()
+        addexpandbtnfunc()
     }
 }
