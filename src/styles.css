@@ -172,8 +172,19 @@ dialog #projectdialog {
     }
 
     .expand-todo-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
         background-color: grey;
         height: 100%;
         width: 100%;
-        z-index: 1;
+        
+    }
+
+    .close-todo-button { 
+        width: 10rem;
+        height: 10rem;
+        background-color: green;
+        font-size: large;
     }

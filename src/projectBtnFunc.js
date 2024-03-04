@@ -2,18 +2,11 @@ import differentprojects from ".";
 import { addTodoBtnFunc } from "./AddTodoBtnFunc"; 
 import { todoSubmitBtnFunc } from "./todoSubmitBtnFunc";
 import { displaytodos } from "./displaytodos";
-import { newProject } from "./SubmitBtnFunc";
+import { newProject } from "./projectSubmitButtonFunc";
+import { closeModal } from "./closeModal";
 
 let projectName;
-export function closeModal() {
-    let showprojectmodal = document.getElementById("visibleprojectmodal");
-    showprojectmodal.style.display = "none";
-    let projectmodalname = document.getElementById("projectmodalname");
-    projectmodalname.innerHTML = "";
-    let projectmodals = document.getElementById("projectmodaltodos")
-    projectmodals.innerHTML = ""
-    
-}
+
 export function addProjectBtnFunc() {
     let projectbuttons = document.getElementsByClassName("projectbuttons");
     let functionsAdded = false; // Initialize the flag
