@@ -3,8 +3,10 @@ import { closeModal } from "./closeModal";
 import { displaytodos } from "./displaytodos";
 import { projectName } from "./projectBtnFunc";
 import differentprojects from ".";
+
 let eventlisteneradded = false;
-export function addexpandbtnfunc() {
+
+export function deleteTodoButtonFunc() {
     let project = differentprojects[projectName]
     let expandtodobuttons = document.getElementsByClassName("expand-todo-btn");
     let expandtodospace = document.getElementById("todos")

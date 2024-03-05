@@ -3,7 +3,7 @@ import { displayProject } from "./displayProject";
 import differentprojects from ".";
 import { Project } from "./createProject";
 
-let newProject; 
+let createdProject; 
 
 export function SubmitBtnFunc() {
     let submitButton = document.getElementById("submitbutton");
@@ -19,8 +19,8 @@ export function SubmitBtnFunc() {
         projectdialog.close();
         projectTitle.value = "";
         
-        newProject = new Project(titleNameInputValue);
-        differentprojects[newProject.title] = newProject; // Use project title as the key
+        createdProject = new Project(titleNameInputValue);
+        differentprojects[createdProject.title] = createdProject; // Use project title as the key
 
         displayProject(titleNameInputValue);
 
@@ -28,4 +28,4 @@ export function SubmitBtnFunc() {
         console.log(differentprojects);
     }
 }
-export { newProject }
+export { createdProject }

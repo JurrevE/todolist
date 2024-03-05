@@ -1,5 +1,4 @@
 import differentprojects from ".";
-import { addexpandbtnfunc } from "./expandtodobtnfunc";
 
 let project;
 
@@ -31,7 +30,6 @@ export function displaytodos() {
         }
 
         projectmodaltododiv.appendChild(tododiv);
-        addexpandbtnfunc();
     }
 }
 

@@ -2,7 +2,7 @@ import differentprojects from ".";
 import { addTodoBtnFunc } from "./AddTodoBtnFunc"; 
 import { todoSubmitBtnFunc } from "./todoSubmitBtnFunc";
 import { displaytodos } from "./displaytodos";
-import { newProject } from "./projectSubmitButtonFunc";
+import { createdProject } from "./projectSubmitButtonFunc";
 import { closeModal } from "./closeModal";
 
 let projectName;
@@ -22,33 +22,16 @@ export function addProjectBtnFunc() {
     }
     
 
-    function deleteProject() {
-        let projectName = document.getElementById("projectmodalname").innerText;
     
-        let projectindex = differentprojects.indexOf(projectName);
-        if (projectindex !== -1) {
-            differentprojects.splice(projectindex, 1);
-        }
-    
-        let projectbuttons = document.getElementsByClassName("projectbuttons");
-        for (let i = 0; i < projectbuttons.length; i++) {
-            if (projectbuttons[i].innerText === projectName) {
-                projectbuttons[i].parentNode.removeChild(projectbuttons[i]);
-                break; 
-            }
-        }
-    
-        closeModal();
-        console.log(differentprojects);
-    }
     
     for (let i = 0; i < projectbuttons.length; i++) {
         if (!projectbuttons[i].hasAttribute("data-clicked")) {
             projectbuttons[i].setAttribute("data-clicked", "true");
-            projectbuttons[i].setAttribute("data-project-button", newProject.data)
+            projectbuttons[i].setAttribute("data-project-button", createdProject.data)
+            console.log("great succes")
             
             projectbuttons[i].addEventListener('click', function() {
-                let projectName = this.innerHTML; 
+                let projectName = this.innerHTML;   
                 let showprojectmodal = document.getElementById("visibleprojectmodal");
 
                 if (!showprojectmodal) {
@@ -71,12 +54,9 @@ export function addProjectBtnFunc() {
                     let projectmodaltodos = document.createElement("div")
                     projectmodaltodos.setAttribute("id", "projectmodaltodos")
 
-                    let deleteprojectbtn = document.createElement("button");
-                    deleteprojectbtn.setAttribute("id", "deleteprojectbtn");
-                    deleteprojectbtn.innerText = "Delete project";
-                    deleteprojectbtn.addEventListener("click", deleteProject);
+                   
 
-                    showprojectmodal.append(projectmodalclosebtn, projectmodaladdtodobtn, projectmodalname, projectmodaltodos, deleteprojectbtn);
+                    showprojectmodal.append(projectmodalclosebtn, projectmodaladdtodobtn, projectmodalname, projectmodaltodos, );
                     
                     let maincontent = document.getElementById("todos");
                     maincontent.appendChild(showprojectmodal);
