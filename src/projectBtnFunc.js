@@ -5,7 +5,7 @@ import { displaytodos } from "./displaytodos";
 import { createdProject } from "./projectSubmitButtonFunc";
 import { closeModal } from "./closeModal";
 
-let projectName;
+
 
 export function addProjectBtnFunc() {
     let projectbuttons = document.getElementsByClassName("projectbuttons");
@@ -20,9 +20,6 @@ export function addProjectBtnFunc() {
             displaytodos()
         }
     }
-    
-
-    
     
     for (let i = 0; i < projectbuttons.length; i++) {
         if (!projectbuttons[i].hasAttribute("data-clicked")) {
@@ -54,8 +51,6 @@ export function addProjectBtnFunc() {
                     let projectmodaltodos = document.createElement("div")
                     projectmodaltodos.setAttribute("id", "projectmodaltodos")
 
-                   
-
                     showprojectmodal.append(projectmodalclosebtn, projectmodaladdtodobtn, projectmodalname, projectmodaltodos, );
                     
                     let maincontent = document.getElementById("todos");
@@ -76,4 +71,4 @@ export function addProjectBtnFunc() {
         }
     }
 }
-export { projectName } 
+

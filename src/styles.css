@@ -162,11 +162,11 @@ dialog #projectdialog {
         font-size: x-large;
     }
 
-    .expand-todo-btn {
+    .delete-todo-btn {
         
         width: 10rem;
         height: 80%;
-        background-color: green;
+        background-color: red;
         font-size: large;
     
     }

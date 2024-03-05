@@ -9,17 +9,17 @@ export function displaytodos() {
     let projectName = document.getElementById("projectmodalname").innerText;
     project = differentprojects[projectName]; // Assign the project variable
 
-    let expandbuttoncounter = 0;
+    let deletecounter = 0;
 
     for (let i = 0; i < project.todos.length; i++) {
         let tododiv = document.createElement("div");
-        let tododivbutton = document.createElement("button");
-        tododivbutton.innerHTML = "Expand todo";
-        tododivbutton.classList.add("expand-todo-btn")
-        tododivbutton.setAttribute("data-expand-button", expandbuttoncounter); // Add a class for styling or event handling
-        expandbuttoncounter++
+        let tododivdeletebutton = document.createElement("button");
+        tododivdeletebutton.innerHTML = "Delete todo";
+        tododivdeletebutton.classList.add("delete-todo-btn")
+        tododivdeletebutton.setAttribute("data-delete-button", deletecounter); // Add a class for styling or event handling
+        deletecounter++
         tododiv.classList.add("tododiv");
-        tododiv.appendChild(tododivbutton); // Append the delete button to tododiv
+        tododiv.appendChild(tododivdeletebutton); // Append the delete button to tododiv
 
         if (project.todos[i].title) {
             let titleElement = document.createElement("span");
