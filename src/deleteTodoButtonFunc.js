@@ -11,7 +11,6 @@ export function deleteTodoButtonFunc(){
         deleteTodoButtons[i].addEventListener("click", function(event){
             let buttondata = event.target.getAttribute("data-delete-button")
             console.log(buttondata)
-            buttondata = todos[0]
             todos.splice(buttondata, 1)
             console.log(todos)
             displaytodos()
