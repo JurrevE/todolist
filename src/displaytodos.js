@@ -1,5 +1,7 @@
 import differentprojects from ".";
 
+import { deleteTodoButtonFunc } from "./deleteTodoButtonFunc";
+
 let project;
 
 export function displaytodos() {
@@ -31,6 +33,7 @@ export function displaytodos() {
 
         projectmodaltododiv.appendChild(tododiv);
     }
+    deleteTodoButtonFunc()
 }
 
 export { project };
