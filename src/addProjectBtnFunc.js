@@ -4,23 +4,14 @@ import { todoSubmitBtnFunc } from "./todoSubmitBtnFunc";
 import { displaytodos } from "./displaytodos";
 import { createdProject } from "./projectSubmitButtonFunc";
 import { closeModal } from "./closeModal";
+import { deleteProjectFunc } from "./deleteProjectFunc";
+import { openModal } from "./openModal";
 
 
 
 export function addProjectBtnFunc() {
     let projectbuttons = document.getElementsByClassName("projectbuttons");
     let functionsAdded = false; // Initialize the flag
-    
-    function openModal(projectName) {
-        let showprojectmodal = document.getElementById("visibleprojectmodal");
-        if (showprojectmodal) {
-            showprojectmodal.style.display = "inline-flex";
-            let projectmodalname = document.getElementById("projectmodalname");
-            projectmodalname.innerHTML = projectName; 
-            displaytodos()
-        }
-    }
-    
     for (let i = 0; i < projectbuttons.length; i++) {
         if (!projectbuttons[i].hasAttribute("data-clicked")) {
             projectbuttons[i].setAttribute("data-clicked", "true");
@@ -51,7 +42,11 @@ export function addProjectBtnFunc() {
                     let projectmodaltodos = document.createElement("div")
                     projectmodaltodos.setAttribute("id", "projectmodaltodos")
 
-                    showprojectmodal.append(projectmodalclosebtn, projectmodaladdtodobtn, projectmodalname, projectmodaltodos, );
+                    let projectdeletebutton = document.createElement("button")
+                    projectdeletebutton.setAttribute("id", "projectdeletebutton")
+                    projectdeletebutton.innerHTML = "Delete project"
+
+                    showprojectmodal.append(projectmodalclosebtn, projectmodaladdtodobtn, projectmodalname, projectmodaltodos, projectdeletebutton );
                     
                     let maincontent = document.getElementById("todos");
                     maincontent.appendChild(showprojectmodal);
@@ -66,6 +61,7 @@ export function addProjectBtnFunc() {
                 
                 projectmodaltodos.innerHTML = ""
                 openModal(projectName);
+                deleteProjectFunc()
                 
             });
         }

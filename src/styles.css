@@ -122,10 +122,15 @@ dialog #projectdialog {
         align-items: center;
     }
 
-    #deleteprojectbtn {
+    #projectdeletebutton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: purple; 
         width: 10rem;
         height: 5rem;
+        margin: 2rem;
+        font-size: x-large;
 
     }
     

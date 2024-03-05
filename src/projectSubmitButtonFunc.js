@@ -1,4 +1,4 @@
-import { addProjectBtnFunc } from "./projectBtnFunc";
+import { addProjectBtnFunc } from "./addProjectBtnFunc";
 import { displayProject } from "./displayProject";
 import differentprojects from ".";
 import { Project } from "./createProject";
